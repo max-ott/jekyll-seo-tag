@@ -54,8 +54,10 @@
 {% if site.twitter %}
   {% if seo_tag.image %}
     <meta name="twitter:card" content="{{ page.twitter.card | default: site.twitter.card | default: "summary_large_image" }}" />
+    <meta name="twitter:image" content="{{ seo_tag.image.path }}">
   {% else %}
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="{{ seo_tag.image.path }}">
   {% endif %}
 
   <meta name="twitter:site" content="@{{ site.twitter.username | replace:"@","" }}" />
